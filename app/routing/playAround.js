@@ -1,4 +1,4 @@
-let friends = [
+let aryFriends = [
     {
         name: "Ahmed",
         photo: "https://www.istockphoto.com/photo/smiling-man-gm580109640-99759761",
@@ -66,4 +66,46 @@ let friends = [
     
 ];
 
-module.exports = friends;
+let singleFriend = {
+        name: "Jimmy",
+        photo: "https://www.istockphoto.com/photo/hispanic-young-woman-looking-at-the-camera-gm1161639159-318370544",
+        scores: [
+            3,
+            4,
+            3,
+            4,
+            5,
+            2,
+            3,
+            4,
+            5,
+            2
+        ]
+    }
+
+
+
+function findClosestMatch(objFriend) {
+    let closestMatchIndex = -1
+    let smallestDifference = 51
+    for (let i = 0; i < aryFriends.length; i++) {
+            let difference = 0
+            //this loop is only to sum all the differences
+            for (let j = 0; j < aryFriends[i].scores.length; j++) {
+                const element = aryFriends[i].scores[j];
+                difference += Math.abs(element - objFriend.scores[j])
+            }
+            if (difference < smallestDifference) {
+                smallestDifference = difference;
+                closestMatchIndex = i
+            }
+            console.log(difference)
+            console.log(smallestDifference)
+            
+    }
+    console.log(aryFriends[closestMatchIndex])
+    return aryFriends[closestMatchIndex]
+
+};
+
+findClosestMatch(singleFriend)
