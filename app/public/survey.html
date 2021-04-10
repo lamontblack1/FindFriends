@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <span class="fa fa-fire"></span> Closest Match Survey
+            </h1>
+            <hr>
+            <h2 class="text-center">Answer the survey questions below based an how much you agree.</h2>
+            <br>
+            <div class="text-center">
+                <a href="/">
+                    <button class="btn btn-lg btn-default">
+                        <span class="fa fa-home"></span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Reservation Page -->
+                <div class="card">
+                    <div class="card-header">
+                        Enter 1 for strongly disagree, a 5 for strongly agree.
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="userName">Name</label>
+                                <input type="text" class="form-control" id="userName">
+                            </div>
+                            <div class="form-group">
+                                <label for="photoUrl">Link for your photo</label>
+                                <input type="text" class="form-control" id="photoUrl">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="q1">I am a foodie.</label>
+                                <select class="form-control" id="q1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q2">I need a lot of companionship, I like a lot of time together.</label>
+                                <select class="form-control" id="q2">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q3">I like to travel.</label>
+                                <select class="form-control" id="q3">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q4">I feel it is important to spend most of my time helping others.</label>
+                                <select class="form-control" id="q4">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q5">I am very active and spend a lot of time outside.</label>
+                                <select class="form-control" id="q5">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q6">I keep my living space and car very clean.</label>
+                                <select class="form-control" id="q6">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q7">I have many good friends, as opposed to a tight group of very close friends.</label>
+                                <select class="form-control" id="q7">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q8">Marriage is important to me.</label>
+                                <select class="form-control" id="q8">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q9">I like to eat very healthy food.</label>
+                                <select class="form-control" id="q9">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q10">I believe the world is becoming a better place.</label>
+                                <select class="form-control" id="q10">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+               
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+        // Here we grab the form elements
+        let aryScores = [];
+        for (let i = 1; i < 11; i++) {
+            let thisScore = parseInt($("#q" + i).val().trim();) 
+            aryScores.push(thisScore);
+        }
+        console.log(aryScores)
+
+        var newFriend = {
+            name: $("#userName").val().trim(),
+            photo: $("#photoUrl").val().trim(),
+            scores: aryScores
+        };
+
+
+
+        $.post("/api/friends", newReservation,
+            function (data) {
+
+                // If a table is available... tell user they are booked.
+                if (data) {
+                    alert("Yay! You are officially booked!");
+                }
+
+                // If a table is available... tell user they on the waiting list.
+                else {
+                    alert("Sorry you are on the wait list");
+                }
+
+                // Clear the form when submitting
+                $("#reserve-name").val("");
+                $("#reserve-phone").val("");
+                $("#reserve-email").val("");
+                $("#reserve-unique-id").val("");
+
+            });
+
+    });
+
+</script>
