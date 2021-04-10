@@ -151,8 +151,31 @@
                                 </select>
                             </div>
                            
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                            <br>
+                            <button id="clear" class="btn btn-primary submit mt-2">Clear Form</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Closest Friend Match Is:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center" id="modalBody">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" width="400px" alt="">
+                        <br>
+                        <h3>John</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -184,7 +207,7 @@
         // Here we grab the form elements
         let aryScores = [];
         for (let i = 1; i < 11; i++) {
-            let thisScore = parseInt($("#q" + i).val().trim();) 
+            let thisScore = parseInt($("#q" + i).val().trim());
             aryScores.push(thisScore);
         }
         console.log(aryScores)
@@ -195,29 +218,38 @@
             scores: aryScores
         };
 
+        console.log(newFriend)
 
-
-        $.post("/api/friends", newReservation,
+        $.post("/api/friends", newFriend,
             function (data) {
 
                 // If a table is available... tell user they are booked.
                 if (data) {
-                    alert("Yay! You are officially booked!");
+                    let modalDiv = $("#modalBody")
+                    modalDiv.empty()
+                    let modalImg = $("<img src='" + data.photo + "' width='400px' alt=''>")
+                    modalDiv.append(modalImg)
+                    modalDiv.append("<br><h3>" + data.name + "</h3>")
                 }
 
                 // If a table is available... tell user they on the waiting list.
                 else {
-                    alert("Sorry you are on the wait list");
+                    alert("Sorry there was an error");
                 }
 
-                // Clear the form when submitting
-                $("#reserve-name").val("");
-                $("#reserve-phone").val("");
-                $("#reserve-email").val("");
-                $("#reserve-unique-id").val("");
-
+               
             });
 
     });
+
+$("#clear").on("click", clearForm)
+
+function clearForm() {
+    $("#userName").val("");
+    $("#photoUrl").val("");
+    for (let i = 1; i < 11; i++) {
+        $("#q" + i).val("")
+    }
+}
 
 </script>

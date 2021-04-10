@@ -1,7 +1,7 @@
 let friends = [
     {
         name: "Ahmed",
-        photo: "https://www.istockphoto.com/photo/smiling-man-gm580109640-99759761",
+        photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         scores: [
             5,
             1,
@@ -17,7 +17,7 @@ let friends = [
     },
      {
         name: "John",
-        photo: "https://www.istockphoto.com/photo/frontal-male-passport-photo-isolated-on-white-background-eu-standardization-gm1153469287-313287873",
+        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         scores: [
             2,
             4,
@@ -33,7 +33,7 @@ let friends = [
     },
     {
         name: "Jane",
-        photo: "https://www.istockphoto.com/photo/official-portrait-of-a-blonde-woman-gm515596766-88569207",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
         scores: [
             2,
             4,
@@ -49,7 +49,7 @@ let friends = [
     },
     {
         name: "Paola",
-        photo: "https://www.istockphoto.com/photo/hispanic-young-woman-looking-at-the-camera-gm1161639159-318370544",
+        photo: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         scores: [
             2,
             4,
