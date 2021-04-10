@@ -10,5 +10,5 @@ It is a fun find closest friend match app.
 * [npm path package](https://www.npmjs.com/package/path)
 
 # How users can get started with this project
-Simply click the link at the top of the page.
+Simply click the link at the top of this readme page.
 
